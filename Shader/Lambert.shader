@@ -85,7 +85,8 @@
 
                 float3 normal = normalize(i.normal);
                 float3 light  = normalize(_WorldSpaceLightPos0.xyz);
-                float  diffuse = saturate(dot(normal, light));
+                //float  diffuse = saturate(dot(normal, light));
+		float  diffuse = saturate(dot(normal, light))*0.5+0.5;
 
                 float3 ambient = ShadeSH9(half4(normal, 1));
 				float4 tex = 0.0;
