@@ -88,7 +88,7 @@
                 float  diffuse = saturate(dot(normal, light));
 
                 float3 ambient = ShadeSH9(half4(normal, 1));
-				float4 tex = 0;
+				float4 tex = 0.0;
 			    if( _UVPixalate <= 0.5 )
 				tex = tex2D(_MainTex, i.uv) * _MainColor;
 			    else
